@@ -15,7 +15,9 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
+    # disabled build - we`r need recieve image from docker
+    # build: .
+    image: amvmail/api_yamdb:v.2.05.09.2022
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
