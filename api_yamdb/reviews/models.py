@@ -1,6 +1,6 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
-from users.models import User
+from /yamdb_final/users/models import User
 
 SCORE_CHOICES = [(i, i) for i in range(1, 11)]
 
