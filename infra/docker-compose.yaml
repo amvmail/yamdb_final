@@ -24,7 +24,7 @@ services:
       # Данные, хранящиеся в томе media_value, будут доступны в контейнере web 
       # через директорию /app/media/
       - media_value:/app/media/
-    # «зависит от», 
+    # зависимость от контейнера,
     depends_on:
       - db
     env_file:
