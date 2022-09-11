@@ -26,7 +26,6 @@ urls_auth = [
     path('signup/', signup, name='signup'),
     path('token/', get_jwt_token, name='token'),
 ]
-
 urlpatterns = [
     path('', include(router.urls)),
     path('auth/', include(urls_auth)),
