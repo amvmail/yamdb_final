@@ -16,7 +16,7 @@ services:
       - ./.env
   web:
     # disabled build - we`r need recieve image from docker
-    build: ../api_yamdb/
+    build: ../api_yamdb/ .
     # image: amvmail/yamdb_final:latest
     restart: always
     volumes:
