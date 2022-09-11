@@ -1,7 +1,7 @@
-from django.db import models
+from ..users.models import User
+# from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
-# from users.models import User
-from django.contrib.auth.models import User
+from django.db import models
 
 SCORE_CHOICES = [(i, i) for i in range(1, 11)]
 
