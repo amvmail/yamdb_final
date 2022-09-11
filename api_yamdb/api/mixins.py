@@ -1,6 +1,6 @@
 from rest_framework import filters, mixins, viewsets
-from .permissions import (IsAdminOrReadOnly)
 from rest_framework.pagination import LimitOffsetPagination
+from .permissions import (IsAdminOrReadOnly)
 
 
 class CategoryGenreModelMixin(
