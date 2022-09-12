@@ -73,7 +73,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull amvmail/infra_actions:latest
-            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker ps -a -q
+            sudo docker stop
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
