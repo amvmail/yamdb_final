@@ -72,6 +72,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            sudo docker pull amvmail/infra_actions:latest
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose stop
             sudo docker-compose rm web
@@ -83,6 +84,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d
+          # sudo docker-compose rm web
           # убрал из скриптов sudo docker pull amvmail/yamdb_final:latest
   send_message:
     runs-on: ubuntu-latest
