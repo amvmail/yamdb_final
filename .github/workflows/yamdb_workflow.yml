@@ -72,7 +72,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull amvmail/infra_actions:latest
+            sudo docker pull amvmail/infra-web:latest
             sudo docker ps -a -q
             sudo docker stop
             sudo docker-compose stop

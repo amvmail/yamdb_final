@@ -16,7 +16,7 @@ services:
       - ./.env
   web:
     # comment build: ../api_yamdb/
-    image: amvmail/infra_actions:latest
+    image: amvmail/infra-web:latest
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value,
