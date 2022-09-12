@@ -12,6 +12,8 @@ RUN cd ..
 
 RUN pwd
 
+COPY /api_yamdb/yamdb_workflow.yml /app
+
 COPY /api_yamdb/ /app
 
 CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
