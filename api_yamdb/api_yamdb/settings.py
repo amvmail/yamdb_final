@@ -7,8 +7,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY',
                        default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
-# сейчас без  явного указания режима debug файле тесты не проходят
-DEBUG = False
+# вариант
+DEBUG = os.getenv('DEBUG', default='False')
 
 ALLOWED_HOSTS = ['*']
 
