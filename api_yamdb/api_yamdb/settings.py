@@ -7,7 +7,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY',
                        default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
 
-#  вариант
 DEBUG = os.getenv('DEBUG', default='False')
 
 ALLOWED_HOSTS = ['*']
@@ -115,6 +114,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 AUTH_USER_MODEL = 'users.User'
+
+DEBUG = False
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 
